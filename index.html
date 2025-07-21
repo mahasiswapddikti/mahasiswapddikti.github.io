@@ -1,9 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
+    <!-- SEO Tags and Favicon Added -->
+    <title>Pencarian Data Mahasiswa PDDIKTI - Weebs Version</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kemendikbud API Search</title>
+    <meta name="description" content="Cari dan verifikasi data mahasiswa dari Pangkalan Data Pendidikan Tinggi (PDDIKTI) dengan antarmuka yang terinspirasi oleh anime dan Wuthering Waves. Cepat, mudah, dan tidak resmi.">
+    <meta name="keywords" content="PDDIKTI, Cek Mahasiswa, Data Mahasiswa, Forlap, Dikti, Wuthering Waves, Changli, Rover, Anime, Weebs">
+    <meta name="author" content="Rover the Karbit">
+    <link rel="icon" type="image/png" href="https://oyster.ignimgs.com/mediawiki/apis.ign.com/wuthering-waves/3/30/Rover-havoc-male-icon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pddikti.animu.my.id/"> <!-- Placeholder URL, ganti jika perlu -->
+    <meta property="og:title" content="Pencarian Data Mahasiswa PDDIKTI - Weebs Version">
+    <meta property="og:description" content="Cari data mahasiswa PDDIKTI dengan antarmuka yang terinspirasi oleh Changli dari Wuthering Waves.">
+    <meta property="og:image" content="https://oyster.ignimgs.com/mediawiki/apis.ign.com/wuthering-waves/3/30/Rover-havoc-male-icon.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pddikti.animu.my.id/"> <!-- Placeholder URL, ganti jika perlu -->
+    <meta property="twitter:title" content="Pencarian Data Mahasiswa PDDIKTI - Weebs Version">
+    <meta property="twitter:description" content="Cari data mahasiswa PDDIKTI dengan antarmuka yang terinspirasi oleh Changli dari Wuthering Waves.">
+    <meta property="twitter:image" content="https://oyster.ignimgs.com/mediawiki/apis.ign.com/wuthering-waves/3/30/Rover-havoc-male-icon.png">
+    <!-- End of SEO Tags -->
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -336,7 +357,7 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-3">
                 <div class="flex items-center">
-                    <div class="text-pink-600 font-bold text-xl">KemendikbudAPI</div>
+                    <div class="text-pink-600 font-bold text-xl">PDDIKTI Weebs Version</div>
                 </div>
                 <div class="hidden md:flex space-x-8">
                     <a href="#top" id="home-link" class="menu-item text-pink-900 hover:text-pink-600 transition-colors font-medium relative px-3 py-1">Home</a>
@@ -382,13 +403,13 @@
         <div class="flex flex-col md:flex-row items-start justify-between w-full max-w-6xl">
             <div class="md:w-1/2 md:pr-8 flex flex-col items-start w-full">
                 <div class="text-left mb-6 w-full">
-                    <h1 class="text-4xl md:text-5xl font-bold text-pink-900 mb-2">Kemendikbud API Search</h1>
-                    <p class="text-lg text-pink-800 opacity-90">Search Indonesian Ministry of Education and Culture data</p>
+                    <h1 class="text-4xl md:text-5xl font-bold text-pink-900 mb-2">Unofficial PDDIKTI Data Search</h1>
+                    <p class="text-lg text-pink-800 opacity-90">Search and Verify Student Data in PDDIKTI Database</p>
                 </div>
                 <div class="bg-white bg-opacity-80 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-pink-200 w-full max-w-3xl mb-6">
                     <h2 class="text-lg font-bold text-pink-900 mb-3">Quote of the Day</h2>
-                    <blockquote id="quote-of-the-day" class="text-gray-800 italic text-sm mb-3">"The only way to do great work is to love what you do."</blockquote>
-                    <p id="quote-author" class="text-xs text-pink-700">- Steve Jobs</p>
+                    <blockquote id="quote-of-the-day" class="text-gray-800 italic text-sm mb-3">"People can be kind. People can be cruel. That’s just the way the world is."</blockquote>
+                    <p id="quote-author" class="text-xs text-pink-700">- Elaina</p>
                 </div>
                 <div class="search-container max-w-3xl w-full">
                     <div class="relative">
@@ -504,16 +525,22 @@
             // --- API Endpoints ---
             const SEARCH_API_URL = 'https://api-mahasiswa.animu.my.id/search/';
             const DETAIL_API_URL = 'https://api-mahasiswa.animu.my.id/detail/';
-            const CHAT_GET_URL = 'https://api-mahasiswa.animu.my.id/get-chat?start=0&end=50';
             const CHAT_POST_URL = 'https://api-mahasiswa.animu.my.id/chat';
 
             // --- Chat Implementation ---
-            const MALE_NAMES = ["qua", "Gabimaru", "Thorfinn", "Tanjiro", "Akito", "Gojo", "Yuji", "Kafka", "Goku", "Himmel", "Jinshi", "Jinwoo", "Okarun", "Masamune", "Ichigo", "Kyotaro", "Cid", "Sakamoto", "Haruka", "Ragna"];
-            const FEMALE_NAMES = ["Frieren", "Fern", "Shino", "Maomao", "Nobara", "Yor", "Anya", "Shizuka", "Kyouko", "Kiruko", "Momo", "Ai", "Makima", "Chisato", "Emilia", "Inori", "Takao", "Marin", "Mahiru", "Nazuna"];
+            const MALE_NAMES = ["Zagan", "Gabimaru", "Kazuma", "Tanjiro", "Rimuru", "Gojo", "Yuji", "Stark", "Goku", "Himmel", "Jinshi", "Jinwoo", "Okarun", "Masamune", "Ichigo", "Kyotaro", "Cid", "Sakamoto", "Haruka", "Ragna"];
+            const FEMALE_NAMES = ["Frieren", "Fern", "Elaina", "Maomao", "Nobara", "Yor", "Alya", "Nynym", "Waguri", "Kurumi", "Eris", "Ai", "Makima", "Chisato", "Emilia", "Megumin", "Yuki", "Marin", "Mahiru", "Shion"];
             
             let userAuthorID = null;
             let chatUpdateInterval = null;
             let isInitialChatLoad = true;
+
+            // --- New Chat State Variables for Infinite Scroll ---
+            let currentChatStart = 0;
+            const chatPageSize = 50;
+            let isLoadingMoreChats = false;
+            let allPreviousChatsLoaded = false;
+            let chatScrollListener = null; // To hold the listener function reference
 
             const chatModal = document.getElementById('chat-modal');
             const chatModalContent = document.getElementById('chat-modal-content');
@@ -563,21 +590,70 @@
                 }, 4000);
             }
 
-            async function fetchChats() {
+            // --- CHAT LOGIC REFACTORED FOR INFINITE SCROLL ---
+
+            // New function to load older chats when scrolling up
+            async function loadPreviousChats() {
+                if (isLoadingMoreChats || allPreviousChatsLoaded) return;
+
+                isLoadingMoreChats = true;
+                const loader = document.createElement('div');
+                loader.className = 'text-center py-2 text-pink-700';
+                loader.innerHTML = `<div class="loading mx-auto"></div>`;
+                chatMessagesContainer.prepend(loader);
+
+                const nextBatchStart = currentChatStart + chatPageSize;
+                const url = `https://api-mahasiswa.animu.my.id/get-chat?start=${nextBatchStart}&end=${nextBatchStart + chatPageSize}`;
+
                 try {
-                    const response = await fetch(CHAT_GET_URL);
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
+                    const response = await fetch(url);
+                    const messages = await response.json();
+
+                    loader.remove();
+
+                    if (messages.length === 0) {
+                        allPreviousChatsLoaded = true;
+                        const noMoreMsg = document.createElement('div');
+                        noMoreMsg.className = 'text-center py-2 text-sm text-pink-500';
+                        noMoreMsg.textContent = 'Semua pesan telah dimuat.';
+                        chatMessagesContainer.prepend(noMoreMsg);
+                        return;
                     }
+
+                    currentChatStart = nextBatchStart; // Update start index only on success
+                    messages.sort((a, b) => a.chatID.localeCompare(b.chatID));
+
+                    const oldScrollHeight = chatMessagesContainer.scrollHeight;
+
+                    // Prepend messages in correct order
+                    messages.slice().reverse().forEach(msg => {
+                        const bubble = createApiMessageBubble(msg);
+                        chatMessagesContainer.prepend(bubble);
+                    });
+
+                    // Restore scroll position to prevent jarring jump
+                    chatMessagesContainer.scrollTop = chatMessagesContainer.scrollHeight - oldScrollHeight;
+
+                } catch (error) {
+                    console.error('Error fetching previous chats:', error);
+                    loader.textContent = 'Gagal memuat pesan.';
+                    setTimeout(() => loader.remove(), 2000);
+                } finally {
+                    isLoadingMoreChats = false;
+                }
+            }
+            
+            // This function now handles the initial load AND the 5-second refresh for NEW messages
+            async function refreshLatestChats() {
+                const url = `https://api-mahasiswa.animu.my.id/get-chat?start=0&end=${chatPageSize}`;
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error('Network response was not ok');
                     const messages = await response.json();
                     
                     messages.sort((a, b) => a.chatID.localeCompare(b.chatID));
 
-                    const lastMessageElement = chatMessagesContainer.lastElementChild;
-                    const lastMessageId = lastMessageElement ? lastMessageElement.dataset.chatId : null;
-                    const latestApiMessageId = messages.length > 0 ? messages[messages.length - 1].chatID : null;
-
-                    if (isInitialChatLoad || lastMessageId !== latestApiMessageId) {
+                    if (isInitialChatLoad) {
                         isInitialChatLoad = false;
                         chatMessagesContainer.innerHTML = ''; 
                         if (messages.length === 0) {
@@ -589,6 +665,20 @@
                             });
                         }
                         chatMessagesContainer.scrollTop = chatMessagesContainer.scrollHeight;
+                    } else {
+                        // For refresh, just add new messages without a full re-render
+                        const existingIds = new Set([...chatMessagesContainer.querySelectorAll('[data-chat-id]')].map(el => el.dataset.chatId));
+                        let newMessagesAdded = false;
+                        messages.forEach(msg => {
+                            if (!existingIds.has(msg.chatID)) {
+                                const bubble = createApiMessageBubble(msg);
+                                chatMessagesContainer.appendChild(bubble);
+                                newMessagesAdded = true;
+                            }
+                        });
+                        if (newMessagesAdded) {
+                            chatMessagesContainer.scrollTop = chatMessagesContainer.scrollHeight;
+                        }
                     }
                 } catch (error) {
                     console.error('Error fetching chat:', error);
@@ -623,7 +713,7 @@
                     if (response.ok && result.status) {
                         showNotification(translations[lang].successSend, 'success');
                         chatInputField.value = '';
-                        await fetchChats();
+                        await refreshLatestChats(); // Refresh to show the new message
                     } else if (result.error) {
                         showNotification(`${translations[lang].errorSendFailed}: ${result.error}`, 'error');
                     } else {
@@ -707,17 +797,36 @@
             }
 
             function openChat() {
+                // Reset chat state
                 isInitialChatLoad = true;
+                currentChatStart = 0;
+                allPreviousChatsLoaded = false;
+                isLoadingMoreChats = false;
+
                 chatMessagesContainer.innerHTML = `<div class="text-center py-4 text-pink-800">Loading messages...</div>`;
                 openModal(chatModal, chatModalContent);
-                fetchChats();
-                chatUpdateInterval = setInterval(fetchChats, 5000); // Reverted to 5 seconds
+                refreshLatestChats(); // Initial load
+                
+                // Add scroll listener for loading previous messages
+                chatScrollListener = () => {
+                    if (chatMessagesContainer.scrollTop === 0 && !isLoadingMoreChats) {
+                        loadPreviousChats();
+                    }
+                };
+                chatMessagesContainer.addEventListener('scroll', chatScrollListener);
+
+                chatUpdateInterval = setInterval(refreshLatestChats, 5000);
             }
             
             function closeChat() {
                 if (chatUpdateInterval) {
                     clearInterval(chatUpdateInterval);
                     chatUpdateInterval = null;
+                }
+                // Important: Remove the listener to prevent memory leaks
+                if (chatScrollListener) {
+                    chatMessagesContainer.removeEventListener('scroll', chatScrollListener);
+                    chatScrollListener = null;
                 }
                 closeModal(chatModal, chatModalContent);
             }
@@ -830,7 +939,7 @@
             // --- Language and Translations ---
             const translations = {
                 en: {
-                    title: "Kemendikbud API Search", subtitle: "Search Indonesian Ministry of Education and Culture data", placeholder: "Enter student name...", searchButton: "Search", searching: "Searching...", resultsTitle: "Search Results", noResults: "No results found.", errorMessage: "Error connecting to API.",
+                    title: "Unofficial PDDIKTI Data Search", subtitle: "Search and Verify Student Data in PDDIKTI Database", placeholder: "Enter student name...", searchButton: "Search", searching: "Searching...", resultsTitle: "Search Results", noResults: "No results found.", errorMessage: "Error connecting to API.",
                     disclaimerTitle: "DISCLAIMER FOR PDDIKTI UI CUSTOMIZATION SERVICE", disclaimerContent: `<p>This service is designed solely for the purpose of customizing the user interface (UI) of the PDDIKTI platform. We do not provide, modify, store, or process data sourced from PDDIKTI. Interaction with PDDIKTI core data and functionality remains entirely under the control and responsibility of the user and PDDIKTI.</p><p>We understand the importance of data integrity and continuity of PDDIKTI services. Therefore, we expressly state that:</p><ul class="list-disc pl-5 space-y-2"><li><strong>Primary Focus is UI:</strong> This service ONLY focuses on providing visual options or layouts to enhance the user experience on the PDDIKTI UI and does NOT affect core functions, databases, or security of the PDDIKTI system.</li><li><strong>No Data Modification:</strong> We do not intervene, modify, delete, or add any data to the PDDIKTI system. All displayed data is original data provided by PDDIKTI.</li><li><strong>Not an Official PDDIKTI Service:</strong> This service is NOT part of or officially supported by the Data and Information Technology Center (Pusdatin) of the Ministry of Education, Culture, Research, and Technology of the Republic of Indonesia, or other PDDIKTI parties.</li></ul><h4 class="font-bold text-lg text-pink-900 mt-6">FOLLOW-UP ON POTENTIAL LOSSES:</h4><p>If in the future, the Data and Information Technology Center (Pusdatin) of the Ministry of Education, Culture, Research, and Technology, or authorities over the PDDIKTI platform, feel disadvantaged or find that our service directly or indirectly violates policies, causes disruption, or potentially damages the integrity of the PDDIKTI system, then we reserve the right and will immediately take the following steps:</p><ul class="list-disc pl-5 space-y-2"><li><strong>Service Closure:</strong> We will permanently terminate the operational of this UI customization service.</li><li><strong>IP Access Blocking:</strong> We may block IP addresses associated with the provision of this service to prevent further access to the PDDIKTI platform if deemed necessary.</li></ul><p class="mt-4">We are committed to maintaining internet usage ethics and respecting the intellectual property rights and security of other parties' systems.</p>`,
                     chatPlaceholderReady: "Type a message...",
                     genderSelected: (gender) => `Gender set to ${gender}. You can now chat.`,
@@ -839,10 +948,10 @@
                     successSend: "Message sent successfully!",
                     faqContent: [{q: "Is there anyone prettier than Changli?", a: "Yes, my wife in real life."}, {q: "What if I'm a man and don't like Changli?", a: "Please see a psychologist, your mental health must be damaged."}, {q: "Can I borrow your API?", a: "No, I'm too lazy to set it up."}, {q: "Can I claim Changli as my wife?", a: "Share your location if you dare!!!"}, {q: "Are there other waifus?", a: "Maybe Firefly, but Changli is number one."}],
                     aboutContent: `<p class="text-gray-700 leading-relaxed">Hello! I'm Rover the Karbit, a true adventurer always ready to explore every corner of the world—though sometimes my greatest adventure is finding the lost TV remote. My biggest pride? I'm Changli's Husband, and believe me, life with her is far more exciting than climbing Everest (and much warmer too!).</p>`,
-                    allQuotes: [{q: "The only way to do great work is to love what you do.", a: "Steve Jobs"}, {q: "Innovation distinguishes between a leader and a follower.", a: "Steve Jobs"}, {q: "Your time is limited, don't waste it living someone else's life.", a: "Steve Jobs"}, {q: "Stay hungry, stay foolish.", a: "Steve Jobs"}]
+                    allQuotes: [{q: "Every journey has its final day. Don’t rush!", a: "Zhongli "}, {q: "Hard work betrays none, but dreams betray many.", a: "Hikigaya Hachiman"}, {q: "I’m not a hero. I’m just a scientist. But a scientist can save the world.", a: "Ishigami Senku"}, {q: "People can be kind. People can be cruel. That’s just the way the world is.", a: "Elaina"}]
                 },
                 id: {
-                    title: "Pencarian API Kemendikbud", subtitle: "Cari data Kementerian Pendidikan dan Kebudayaan", placeholder: "Masukkan nama mahasiswa...", searchButton: "Cari", searching: "Mencari...", resultsTitle: "Hasil Pencarian", noResults: "Tidak ada hasil ditemukan.", errorMessage: "Gagal terhubung ke API.",
+                    title: "Pencarian Data PDDIKTI Tidak Resmi", subtitle: "Pencarian dan Verifikasi Data Mahasiswa di Pangkalan Data PDDIKTI", placeholder: "Masukkan nama mahasiswa...", searchButton: "Cari", searching: "Mencari...", resultsTitle: "Hasil Pencarian", noResults: "Tidak ada hasil ditemukan.", errorMessage: "Gagal terhubung ke API.",
                     disclaimerTitle: "DISCLAIMER PENGGUNAAN LAYANAN KUSTOMISASI UI PDDIKTI", disclaimerContent: `<p>Layanan ini dirancang semata-mata untuk tujuan kustomisasi antarmuka pengguna (User Interface/UI) dari platform PDDIKTI. Kami tidak menyediakan, memodifikasi, menyimpan, atau memproses data yang bersumber dari PDDIKTI. Interaksi dengan data dan fungsionalitas inti PDDIKTI sepenuhnya tetap berada di bawah kendali dan tanggung jawab pengguna dan pihak PDDIKTI.</p><p>Kami memahami pentingnya integritasi data dan keberlanjutan layanan PDDIKTI. Oleh karena itu, kami menyatakan dengan tegas bahwa:</p><ul class="list-disc pl-5 space-y-2"><li><strong>Fokus Utama Adalah UI:</strong> Layanan ini HANYA berfokus pada penyediaan opsi visual atau tata letak untuk meningkatkan pengalaman pengguna pada UI PDDIKTI dan TIDAK memengaruhi fungsi inti, basis data, atau keamanan sistem PDDIKTI.</li><li><strong>Tidak Ada Modifikasi Data:</strong> Kami tidak melakukan intervensi, modifikasi, penghapusan, atau penambahan data apa pun pada sistem PDDIKTI. Seluruh data yang ditampilkan adalah data asli yang disediakan oleh PDDIKTI.</li><li><strong>Bukan Layanan Resmi PDDIKTI:</strong> Layanan ini BUKAN merupakan bagian dari atau didukung secara resmi oleh Pusat Data dan Teknologi Informasi (Pusdatin) Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia, atau pihak PDDIKTI lainnya.</li></ul><h4 class="font-bold text-lg text-pink-900 mt-6">TINDAK LANJUT ATAS POTENSI KERUGIAN:</h4><p>Jika di kemudian hari, Pusat Data dan Teknologi Informasi (Pusdatin) Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi, atau pihak yang berwenang atas platform PDDIKTI, merasa dirugikan atau menemukan bahwa layanan kami secara langsung atau tidak langsung melanggar kebijakan, menimbulkan gangguan, atau berpotensi merusak integritas sistem PDDIKTI, maka kami berhak dan akan segera melakukan langkah-langkah berikut:</p><ul class="list-disc pl-5 space-y-2"><li><strong>Penutupan Layanan:</strong> Kami akan menghentikan operasional layanan kustomisasi UI ini secara permanen.</li><li><strong>Pemblokiran Akses IP:</strong> Kami dapat melakukan pemblokiran terhadap alamat IP yang terkait dengan penyediaan layanan ini untuk mencegah akses lebih lanjut ke platform PDDIKTI jika dianggap perlu.</li></ul><p class="mt-4">Kami berkomitmen untuk menjaga etika penggunaan internet dan menghormati hak kekayaan intelektual serta keamanan sistem pihak lain.</p>`,
                     chatPlaceholderReady: "Ketik pesan...",
                     genderSelected: (gender) => `Gender telah diatur ke ${gender === 'male' ? 'Pria' : 'Wanita'}. Anda sekarang bisa chat.`,
@@ -851,11 +960,13 @@
                     successSend: "Pesan berhasil dikirim!",
                     faqContent: [{q: "Apakah ada yang lebih cantik dari changli?", a: "Ya, istri saya di real life."}, {q: "Jika saya laki laki dan tidak suka changli bagaimana?", a: "Silahkan ke psikolog, kejiwaan anda pasti rusak."}, {q: "Bang aku mau pinjem API nya bang, boleh?", a: "Tak boleh, saya malas setting nya."}, {q: "Bang bolehkan saya klaim changli jadi istri saya?", a: "Sharelok tak parani !!!"}, {q: "Ada waifu lain bang?", a: "Firefly kayaknya sih, tapi changli nomor satu."}],
                     aboutContent: `<p class="text-gray-700 leading-relaxed">Halo! Saya Rover si Karbit, seorang petualang sejati yang selalu siap menjelajahi setiap sudut dunia—meskipun terkadang petualangan terbesar saya adalah menemukan remote TV yang hilang. Kebanggaan terbesar saya? Saya adalah suami Changli, dan percayalah, hidup bersamanya jauh lebih menyenangkan daripada mendaki Everest (dan jauh lebih hangat juga!).</p>`,
-                    allQuotes: [{q: "Satu-satunya cara untuk melakukan pekerjaan hebat adalah mencintai apa yang Anda lakukan.", a: "Steve Jobs"}, {q: "Inovasi membedakan antara pemimpin dan pengikut.", a: "Steve Jobs"}, {q: "Waktu Anda terbatas, jangan sia-siakan dengan menjalani hidup orang lain.", a: "Steve Jobs"}, {q: "Tetap lapar, tetap bodoh.", a: "Steve Jobs"}]
+                    allQuotes: [{q: "Setiap perjalanan memiliki hari terakhirnya. Jangan terburu-buru!", a: "Zhongli"}, {q: "Kerja keras tidak mengkhianati siapa pun, tetapi mimpi mengkhianati banyak orang.", a: "Hikigaya Hachiman"}, {q: "Aku bukan pahlawan. Aku hanya seorang ilmuwan. Tapi seorang ilmuwan bisa menyelamatkan dunia.", a: "Ishigami Senku"}, {q: "Manusia bisa bersikap baik. Manusia juga bisa kejam. Itulah cara dunia bekerja.", a: "Elaina"}]
                 }
             };
             function setLanguage(lang) {
                 const t = translations[lang];
+                document.querySelector('html').lang = lang; // Set language on HTML tag
+                document.title = t.title; // Update page title
                 document.querySelector('h1').textContent = t.title;
                 document.querySelector('h1 + p').textContent = t.subtitle;
                 searchInput.placeholder = t.placeholder;
